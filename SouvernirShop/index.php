@@ -191,11 +191,11 @@ alert("Sorry, there was an error uploading your file!");
 
 /*=================================================Sort products list by price================================*/
 if(isset($_POST["sort"])){
-    $sql = "SELECT * from Product order by price DESC";
+    $sql = "SELECT * from Product order by price ASC";
     $result = $db->query($sql)->fetch_all() ;
 } 
 if(isset($_POST["rsort"])){
-    $sql = "SELECT * from Product order by price ASC";
+    $sql = "SELECT * from Product order by price DESC";
     $result = $db->query($sql)->fetch_all() ;
 }   
 /*===================================================Put products into object================================================*/
